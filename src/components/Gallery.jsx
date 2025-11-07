@@ -11,6 +11,11 @@ export default function Gallery({ className = "" }) {
     { src: "/images/masterwork2.jpg"},
     { src: "/images/masterwork3.JPG" },
     {src: "/images/masterwork4.JPG" },
+    { src: "/images/masterwork5.JPG"},
+    { src: "/images/masterwork6.JPG"},
+    { src: "/images/masterwork7.JPG" },
+    {src: "/images/masterwork8.JPG" },
+    {src: "/images/masterwork9.JPG" },
   ];
 
   const scroll = (dir) => {
@@ -56,7 +61,7 @@ export default function Gallery({ className = "" }) {
   return (
     <section id="gallery" className={`section gallery ${className}`}>
       <div className="section-content">
-        <h2>Behind the Scenes</h2>
+        <h2>Behind the Scenes: A digital diary</h2>
         <p>
           A glimpse into my research process, environment, and the moments that
           inspired this Master’s journey.
