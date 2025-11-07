@@ -1,3 +1,6 @@
+import "../styles/about.css";
+
+
 export default function About({ className = "" }) {
   return (
     <section id="about" className={`section about ${className}`}>

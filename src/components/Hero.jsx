@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import "../styles/hero.css";
+
 
 export default function Hero({ className = "" }) {
   const [timeLeft, setTimeLeft] = useState("");
@@ -43,7 +45,7 @@ export default function Hero({ className = "" }) {
       <div className="content fade-in">
         <h1 className="fade-up">Master Thesis Countdown</h1>
         <p className="fade-up delay-1">
-          My Master thesis will be completed and delivered on{" "}
+          My master thesis will be completed and delivered on{" "}
           <strong>May 15, 2026 at 12:00 PM</strong>.
         </p>
         <div id="countdown" className="fade-up delay-2">

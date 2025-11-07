@@ -1,0 +1,13 @@
+.essay  {
+  background: linear-gradient(180deg, var(--rose) 0%, var(--peach) 100%);
+}
+
+.essay h2 {
+  color: var(--cream);
+  margin-bottom: 20px;
+}
+
+.essay p {
+  color: var(--cream);
+  margin-bottom: 25px;
+}

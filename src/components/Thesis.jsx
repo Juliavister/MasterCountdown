@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import "../styles/thesis.css";
+
 
 export default function Thesis({ className = "" }) {
   const [locked, setLocked] = useState(true);

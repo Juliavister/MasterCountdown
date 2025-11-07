@@ -1,0 +1,37 @@
+.thesis {
+  background: linear-gradient(180deg, var(--peach) 0%, var(--mauve) 100%);
+}
+
+.thesis h2 {
+  color: var(--deepgray);
+  margin-bottom: 20px;
+}
+
+.thesis p {
+  color: var(--deepgray);
+  margin-bottom: 25px;
+}
+
+/* Download button */
+.download-btn {
+  display: inline-block;
+  background: var(--cream);
+  color: var(--deepgray);
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: var(--peach);
+  transform: scale(1.05);
+}
+
+.download-btn.disabled {
+  background: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+  cursor: not-allowed;
+  pointer-events: none;
+}

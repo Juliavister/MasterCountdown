@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import "../styles/gallery.css";
 
 export default function Gallery({ className = "" }) {
   const scrollRef = useRef(null);
@@ -6,23 +7,26 @@ export default function Gallery({ className = "" }) {
   const isHovered = useRef(false);
   const direction = useRef(1);
 
- const photos = [
-    { src: "/images/masterwork.JPG"},
-    { src: "/images/masterwork2.jpg"},
+  const photos = [
+    { src: "/images/masterwork.JPG" },
+    { src: "/images/masterwork2.jpg" },
     { src: "/images/masterwork3.JPG" },
-    {src: "/images/masterwork4.JPG" },
-    { src: "/images/masterwork5.JPG"},
-    { src: "/images/masterwork6.JPG"},
+    { src: "/images/masterwork4.JPG" },
+    { src: "/images/masterwork5.JPG" },
+    { src: "/images/masterwork6.JPG" },
     { src: "/images/masterwork7.JPG" },
-    {src: "/images/masterwork8.JPG" },
-    {src: "/images/masterwork9.JPG" },
+    { src: "/images/masterwork8.JPG" },
+    { src: "/images/masterwork9.JPG" },
   ];
 
   const scroll = (dir) => {
     const container = scrollRef.current;
     if (!container) return;
     const scrollAmount = 350;
-    container.scrollBy({ left: dir === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
+    container.scrollBy({
+      left: dir === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   // Detect when gallery is visible on screen
@@ -42,8 +46,7 @@ export default function Gallery({ className = "" }) {
 
     const animate = () => {
       if (container && isVisible && !isHovered.current) {
-        container.scrollLeft += direction.current * 0.5; // ✅ gentle speed
-        // reverse direction at edges
+        container.scrollLeft += direction.current * 0.5; // gentle speed
         if (
           container.scrollLeft + container.clientWidth >= container.scrollWidth - 1 ||
           container.scrollLeft <= 0
@@ -60,34 +63,38 @@ export default function Gallery({ className = "" }) {
 
   return (
     <section id="gallery" className={`section gallery ${className}`}>
+      {/* --- Intro text --- */}
       <div className="section-content">
-        <h2>Behind the Scenes: A digital diary</h2>
+        <h2>Behind the Scenes: A Digital Diary</h2>
         <p>
-          A glimpse into my research process, environment, and the moments that
-          inspired this Master’s journey.
+          A glimpse into my research process and environment — mostly consisting
+          of the study hall at Ifi — and all the moments that shaped my master’s
+          journey. Luckily, I’m not alone! Huge shout-out to my co-students and
+          friends who made this possible.
         </p>
+      </div>
 
-        <div
-          className="carousel-container"
-          onMouseEnter={() => (isHovered.current = true)}
-          onMouseLeave={() => (isHovered.current = false)}
-        >
-          <button className="scroll-btn left" onClick={() => scroll("left")}>
-            <i className="fa-solid fa-chevron-left"></i>
-          </button>
+      {/* --- Carousel moved OUTSIDE of section-content --- */}
+      <div
+        className="carousel-container"
+        onMouseEnter={() => (isHovered.current = true)}
+        onMouseLeave={() => (isHovered.current = false)}
+      >
+        <button className="scroll-btn left" onClick={() => scroll("left")}>
+          <i className="fa-solid fa-chevron-left"></i>
+        </button>
 
-          <div className="carousel" ref={scrollRef}>
-            {photos.map((photo, i) => (
-              <div className="carousel-item" key={i}>
-                <img src={photo.src} alt={photo.caption} />
-              </div>
-            ))}
-          </div>
-
-          <button className="scroll-btn right" onClick={() => scroll("right")}>
-            <i className="fa-solid fa-chevron-right"></i>
-          </button>
+        <div className="carousel" ref={scrollRef}>
+          {photos.map((photo, i) => (
+            <div className="carousel-item" key={i}>
+              <img src={photo.src} alt={`Gallery image ${i + 1}`} />
+            </div>
+          ))}
         </div>
+
+        <button className="scroll-btn right" onClick={() => scroll("right")}>
+          <i className="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
 
       <a href="#essay" className="scroll-down light">

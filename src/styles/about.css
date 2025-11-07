@@ -1,0 +1,14 @@
+.about {
+  background: linear-gradient(180deg, var(--mauve) 0%, var(--rose) 100%);
+}
+
+.about h2 {
+  color: var(--peach);
+  margin-bottom: 20px;
+}
+
+.about p {
+  color: var(--cream);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
