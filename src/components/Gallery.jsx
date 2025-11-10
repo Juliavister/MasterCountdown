@@ -49,7 +49,7 @@ export default function Gallery({ className = "" }) {
 
     const animate = () => {
       if (container && isVisible && !isHovered.current) {
-        container.scrollLeft += direction.current * 0.5; // gentle speed
+        container.scrollLeft += direction.current * 0.5; 
         if (
           container.scrollLeft + container.clientWidth >= container.scrollWidth - 1 ||
           container.scrollLeft <= 0

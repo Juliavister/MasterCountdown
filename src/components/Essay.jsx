@@ -13,7 +13,7 @@ export default function Essay({ className = "" }) {
           it will be fun to see how the project will evolve!
         </p>
        <iframe
-  src="/public/UiO_Masters_essay_spring2025.pdf"
+  src="/UiO_Masters_essay_spring2025.pdf"
   title="Essay Preview"
   width="100%"
   height="400px"
@@ -23,7 +23,7 @@ export default function Essay({ className = "" }) {
     marginBottom: "20px",
   }}
 ></iframe>
-<a href="/public/UiO_Masters_essay_spring2025.pdf" className="download-btn" download>
+<a href="/UiO_Masters_essay_spring2025.pdf" className="download-btn" download>
   <i className="fa-solid fa-file-arrow-down"></i> Download Essay
 </a>
 
