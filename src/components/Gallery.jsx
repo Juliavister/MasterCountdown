@@ -11,12 +11,15 @@ export default function Gallery({ className = "" }) {
     { src: "/images/masterwork.JPG" },
     { src: "/images/masterwork2.jpg" },
     { src: "/images/masterwork3.JPG" },
-    { src: "/images/masterwork4.JPG" },
-    { src: "/images/masterwork5.JPG" },
-    { src: "/images/masterwork6.JPG" },
-    { src: "/images/masterwork7.JPG" },
-    { src: "/images/masterwork8.JPG" },
-    { src: "/images/masterwork9.JPG" },
+    {src: "/images/masterwork4.JPG" },
+    {src: "/images/masterwork5.JPG" },
+    {src: "/images/masterwork6.JPG" },
+    {src: "/images/masterwork7.JPG" },
+    {src: "/images/masterwork8.JPG" },
+    {src: "/images/masterwork9.JPG" },
+    {src: "/images/Masterwork10.JPG" },
+    {src: "/images/masterwork11.JPG" },
+    {src: "/images/masterwork12.JPG" },
   ];
 
   const scroll = (dir) => {
