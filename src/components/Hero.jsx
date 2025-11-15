@@ -71,6 +71,7 @@ export default function Hero({ className = "" }) {
     </a>
   </div>
   <p>&copy; {new Date().getFullYear()} Julia Vister</p>
+  <p>psst, scroll for a digital diary and follow my journey...</p>
   <a href="#about" className="scroll-down">
     <i className="fa-solid fa-angles-down"></i>
   </a>

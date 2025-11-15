@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import "../styles/gallery.css";
+import PhotoBook from "../components/PhotoBook";
 
 export default function Gallery({ className = "" }) {
   const scrollRef = useRef(null);
@@ -7,30 +8,58 @@ export default function Gallery({ className = "" }) {
   const isHovered = useRef(false);
   const direction = useRef(1);
 
-  const photos = [
-    { src: "/images/masterwork.JPG" },
-    { src: "/images/masterwork2.jpg" },
-    { src: "/images/masterwork3.JPG" },
-    {src: "/images/masterwork4.JPG" },
-    {src: "/images/masterwork5.JPG" },
-    {src: "/images/masterwork6.JPG" },
-    {src: "/images/masterwork7.JPG" },
-    {src: "/images/masterwork8.JPG" },
-    {src: "/images/masterwork9.JPG" },
-    {src: "/images/Masterwork10.JPG" },
-    {src: "/images/masterwork11.JPG" },
-    {src: "/images/masterwork12.JPG" },
+  const studyPhotos = [
+    {src: "/images/lesesalen/Masterwork13.JPG" },
+    { src: "/images/lesesalen/masterwork.JPG" },
+    { src: "/images/lesesalen/masterwork2.jpg" },
+    { src: "/images/lesesalen/lesesalen.JPG" },
+    { src: "/images/lesesalen/lesesalenLunsj.JPG", caption: "lunchtime!" },
+    { src: "/images/lesesalen/masterwork3.JPG" },
+    {src: "/images/lesesalen/masterwork4.JPG" },
+    {src: "/images/lesesalen/masterwork5.JPG" },
+    { src: "/images/lesesalen/lesesalen2.JPG" },
+    {src: "/images/lesesalen/masterwork6.JPG" },
+    {src: "/images/lesesalen/masterwork7.JPG" },
+     {src: "/images/lesesalen/SIFIjobb.JPG" },
+    {src: "/images/lesesalen/masterwork8.JPG" },
+    {src: "/images/lesesalen/masterwork9.JPG" },
+    {src: "/images/lesesalen/masterwork12.JPG" },
+    {src: "/images/lesesalen/lunsj2.JPG" },
+    {src: "/images/lesesalen/tristeTorsdag.png", caption: "A sad thursday.." },
   ];
 
-  const scroll = (dir) => {
-    const container = scrollRef.current;
-    if (!container) return;
-    const scrollAmount = 350;
-    container.scrollBy({
-      left: dir === "left" ? -scrollAmount : scrollAmount,
-      behavior: "smooth",
-    });
-  };
+  const japanPhotos = []; // will fill later
+
+  const miscPhotos = [
+     {src: "/images/misc/miscDagen.png" },
+     {src: "/images/misc/miscCTF.JPG", caption: "EPT ctf 2025"},
+     {src: "/images/misc/misc1.JPG" },
+     {src: "/images/misc/miscGøy.JPG" },
+     {src: "/images/misc/miscGøy2.JPG" },
+     {src: "/images/misc/miscDagen2.png", caption: "Hosting IFI career fair!"},
+     {src: "/images/misc/miscLesesalen3.png" },
+     {src: "/images/misc/miscBus.JPG" },
+     {src: "/images/misc/miscSIFIctf.JPG", caption: "Hosting CTF" },
+     {src: "/images/misc/bussTur.JPG" },
+     {src: "/images/misc/EscapeQuiz.JPG" },
+     {src: "/images/misc/EPTctf.JPG" },
+     {src: "/images/misc/KielTur.JPG", caption: "weekend trip" },
+     {src: "/images/misc/dagenmøte.JPG", caption: "meetings.." },
+     {src: "/images/misc/konsert.JPG", caption: "went to a concert!!" },
+
+    // ...
+  ];
+
+  const outfitPhotos = [
+  { src: "/images/outfitCheck/o1.JPG", caption: "" },
+  { src: "/images/outfitCheck/o2.JPG", caption: "" },
+  { src: "/images/outfitCheck/o3.png", caption: "" },
+  { src: "/images/outfitCheck/o4.png", caption: "" },
+  { src: "/images/outfitCheck/o5.JPG", caption: "" },
+  { src: "/images/outfitCheck/o6.JPG", caption: "" },
+  { src: "/images/outfitCheck/o7.JPG", caption: "" },
+
+];
 
   // Detect when gallery is visible on screen
   useEffect(() => {
@@ -68,41 +97,23 @@ export default function Gallery({ className = "" }) {
     <section id="gallery" className={`section gallery ${className}`}>
       {/* --- Intro text --- */}
       <div className="section-content">
-        <h2>Behind the Scenes: A Digital Diary</h2>
+        <h2>Behind the Scenes: A digital diary of my final year</h2>
         <p>
-          A glimpse into my research process and environment — mostly consisting
-          of the study hall at Ifi — and all the moments that shaped my master’s
-          journey. Luckily, I’m not alone! Huge shout-out to my co-students and
-          friends who made this possible.
+          A glimpse into my research process and environment and all the moments that shaped my master’s
+          journey. Mostly consisting of long (and some short) days at the study hall at ifi, surrounded by friends. We've shared countless lunches, complained about deadlines,
+          and laughed through the struggle together. Huge shout-out to my co-students and friends who made this journey more fun! January - February 2026 my environment shifts from 
+          the study hall to Japan! Hopefully I'll be able to capture some great moments there as well as work on my master thesis..
         </p>
       </div>
+      
+       <div className="bookshelf">
+        <PhotoBook title="Study Hall Chronicles" photos={studyPhotos} color="var(--mauve)" />
+        <PhotoBook title="Winter in Japan (coming soon)" photos={japanPhotos} color="var(--rose)" />
+        <PhotoBook title="Moments in Between" photos={miscPhotos} color="var(--peach)" />
+        <PhotoBook title="Elevator Outfit Check" photos={outfitPhotos} color="var(--deepgray)" 
+/>
 
-      {/* --- Carousel moved OUTSIDE of section-content --- */}
-      <div
-        className="carousel-container"
-        onMouseEnter={() => (isHovered.current = true)}
-        onMouseLeave={() => (isHovered.current = false)}
-      >
-        <button className="scroll-btn left" onClick={() => scroll("left")}>
-          <i className="fa-solid fa-chevron-left"></i>
-        </button>
-
-        <div className="carousel" ref={scrollRef}>
-          {photos.map((photo, i) => (
-            <div className="carousel-item" key={i}>
-              <img src={photo.src} alt={`Gallery image ${i + 1}`} />
-            </div>
-          ))}
-        </div>
-
-        <button className="scroll-btn right" onClick={() => scroll("right")}>
-          <i className="fa-solid fa-chevron-right"></i>
-        </button>
       </div>
-
-      <a href="#essay" className="scroll-down light">
-        <i className="fa-solid fa-angles-down"></i>
-      </a>
     </section>
   );
 }
