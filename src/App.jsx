@@ -5,6 +5,7 @@ import Thesis from "./components/Thesis";
 import useReveal from "./hooks/useReveal";
 import Gallery from "./components/Gallery";
 import AboutAuthor from "./components/AboutAuthor";
+import Status from "./components/Status";
 import "./styles/global.css";
 import "./styles/animations.css";
 
@@ -20,7 +21,8 @@ export default function App() {
       <Essay className="reveal" />
       <AboutAuthor className="reveal"/>
       <Gallery className="reveal" />
-       <Thesis className="reveal" />
+      <Status className="reveal" />
+      <Thesis className="reveal" />
     </>
   );
 }
