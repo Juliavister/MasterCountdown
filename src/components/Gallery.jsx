@@ -26,6 +26,9 @@ export default function Gallery({ className = "" }) {
     {src: "/images/lesesalen/masterwork12.JPG" },
     {src: "/images/lesesalen/lunsj2.JPG" },
     {src: "/images/lesesalen/tristeTorsdag.png", caption: "A sad thursday.." },
+    {src: "/images/lesesalen/kodekode.JPG" },
+    {src: "/images/lesesalen/masterjobb1.JPG" },
+    {src: "/images/lesesalen/jobbejobbe.JPG" },
   ];
 
   const japanPhotos = []; // will fill later
@@ -50,6 +53,7 @@ export default function Gallery({ className = "" }) {
     // ...
   ];
 
+  /*
   const outfitPhotos = [
   { src: "/images/outfitCheck/o1.JPG", caption: "" },
   { src: "/images/outfitCheck/o2.JPG", caption: "" },
@@ -59,7 +63,7 @@ export default function Gallery({ className = "" }) {
   { src: "/images/outfitCheck/o6.JPG", caption: "" },
   { src: "/images/outfitCheck/o7.JPG", caption: "" },
 
-];
+]; */
 
   // Detect when gallery is visible on screen
   useEffect(() => {
@@ -110,10 +114,10 @@ export default function Gallery({ className = "" }) {
         <PhotoBook title="Study Hall Chronicles" photos={studyPhotos} color="var(--mauve)" />
         <PhotoBook title="Winter in Japan (coming soon)" photos={japanPhotos} color="var(--rose)" />
         <PhotoBook title="Moments in Between" photos={miscPhotos} color="var(--peach)" />
-        <PhotoBook title="Elevator Outfit Check" photos={outfitPhotos} color="var(--deepgray)" 
-/>
 
       </div>
     </section>
   );
 }
+
+//<PhotoBook title="Elevator Outfit Check" photos={outfitPhotos} color="var(--deepgray)" />
