@@ -4,22 +4,21 @@ export default function CurrentStatus({ className = "" }) {
   return (
     <section id="status" className={`section current-status ${className}`}>
       <div className="section-content fade-up">
-        <h2>Current Status: Testing</h2><br></br>
+        <h2>Current Status: Writing</h2><br></br>
         <p>
-          I'm currently setting up the testing set up and preparing for the first round of testing with human participants. 
-          This includes a group of students who have taken the Ethical Hacking course at UiO, as well as a second group of more experiences security professionals. 
-          I have up until now familiarized myself with DVWA, and modified modules and the code to fit the needs of my testing!  
+        As of March 2026, i have finished all testing, and am currently analyzing the results.
+        At the same time I am also writing the thesis by trying to put to words to the results and visualizing all the findings 
+        in graphs, tables and process flows. 
         </p>
-
         <p className="highlight">
-          <strong>Next milestone:</strong> Set up PentestGPT + conduc tests by {" "}
-          <em>February 2026</em>.
+          <strong>Next milestone:</strong> First draft ready in {" "}
+          <em>April 2026</em>.
         </p>
 
         <div className="status-meter">
-          <div className="status-fill" style={{ width: "35%" }}></div>
+          <div className="status-fill" style={{ width: "75%" }}></div>
         </div>
-        <p className="progress-text">Progress: 35% completed</p>
+        <p className="progress-text">Progress: 75% completed</p>
       </div>
 
       <a href="#gallery" className="scroll-down light">

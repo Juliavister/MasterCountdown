@@ -8,9 +8,9 @@ export default function Essay({ className = "" }) {
         <h2>Master Essay</h2>
         <p>
           Here you can read the essay I wrote during the spring semester as part of my Thesis preperation.
-          Please note that this was just the start phase of the project and many things has changed and 
-          will change. However, as of now this gives a nice overview of what the project is about, and 
-          it will be fun to see how the project will evolve!
+          Please note that this was just the start phase of the project. However, as of now this gives a nice overview 
+          of what the project started out to be. It has been subject to quite the changes since then, and the final thesis will differ quite a bit from
+          how it started out! 
         </p>
        <iframe
   src="/UiO_Masters_essay_spring2025.pdf"

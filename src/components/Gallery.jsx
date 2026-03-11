@@ -9,6 +9,7 @@ export default function Gallery({ className = "" }) {
   const direction = useRef(1);
 
   const studyPhotos = [
+    {src: "/images/lesesalen/AItest.jpeg" },
     {src: "/images/lesesalen/Masterwork13.JPG" },
     { src: "/images/lesesalen/masterwork.JPG" },
     { src: "/images/lesesalen/masterwork2.jpg" },
@@ -26,12 +27,37 @@ export default function Gallery({ className = "" }) {
     {src: "/images/lesesalen/masterwork12.JPG" },
     {src: "/images/lesesalen/lunsj2.JPG" },
     {src: "/images/lesesalen/tristeTorsdag.png", caption: "A sad thursday.." },
+    {src: "/images/lesesalen/Stester.jpeg" },
     {src: "/images/lesesalen/kodekode.JPG" },
+    {src: "/images/lesesalen/skrivedes.JPG" },
+    {src: "/images/lesesalen/jobbemaster.JPG" },
     {src: "/images/lesesalen/masterjobb1.JPG" },
     {src: "/images/lesesalen/jobbejobbe.JPG" },
+    {src: "/images/lesesalen/lesesalfeb.JPG" },
+    {src: "/images/lesesalen/lesesalmars.JPG" },
+    {src: "/images/lesesalen/hjemme.JPG" },
+    {src: "/images/lesesalen/skriving.JPG" },
+    
   ];
 
-  const japanPhotos = []; // will fill later
+  const japanPhotos = [
+    {src: "/images/Japan/mastercafe.jpeg"},
+    {src: "/images/Japan/Tokyo.jpeg"},
+    {src: "/images/Japan/tokyo2.JPG"},
+    {src: "/images/Japan/cafetokyo.JPG"},
+    {src: "/images/Japan/Hakone.jpeg"},
+    {src: "/images/Japan/Hakone2.jpeg"},
+    {src: "/images/Japan/mastercafe2.JPG"},
+    {src: "/images/Japan/Masterjobbing.jpeg"},
+    {src: "/images/Japan/osaka.jpeg"},
+    {src: "/images/Japan/hiroshima.jpeg"},
+    {src: "/images/Japan/food.jpeg"},
+    {src: "/images/Japan/cafekyoto.JPG"},
+    {src: "/images/Japan/Tokyo3.JPG"},
+    {src: "/images/Japan/banen.jpg"},
+    {src: "/images/Japan/nakanocafe.JPG"},
+    {src: "/images/Japan/jpdog.jpg"},
+  ]; 
 
   const miscPhotos = [
      {src: "/images/misc/miscDagen.png" },
@@ -49,21 +75,8 @@ export default function Gallery({ className = "" }) {
      {src: "/images/misc/KielTur.JPG", caption: "weekend trip" },
      {src: "/images/misc/dagenmøte.JPG", caption: "meetings.." },
      {src: "/images/misc/konsert.JPG", caption: "went to a concert!!" },
-
-    // ...
   ];
 
-  /*
-  const outfitPhotos = [
-  { src: "/images/outfitCheck/o1.JPG", caption: "" },
-  { src: "/images/outfitCheck/o2.JPG", caption: "" },
-  { src: "/images/outfitCheck/o3.png", caption: "" },
-  { src: "/images/outfitCheck/o4.png", caption: "" },
-  { src: "/images/outfitCheck/o5.JPG", caption: "" },
-  { src: "/images/outfitCheck/o6.JPG", caption: "" },
-  { src: "/images/outfitCheck/o7.JPG", caption: "" },
-
-]; */
 
   // Detect when gallery is visible on screen
   useEffect(() => {
@@ -105,14 +118,17 @@ export default function Gallery({ className = "" }) {
         <p>
           A glimpse into my research process and environment and all the moments that shaped my master’s
           journey. Mostly consisting of long (and some short) days at the study hall at ifi, surrounded by friends. We've shared countless lunches, complained about deadlines,
-          and laughed through the struggle together. Huge shout-out to my co-students and friends who made this journey more fun! January - February 2026 my environment shifts from 
-          the study hall to Japan! Hopefully I'll be able to capture some great moments there as well as work on my master thesis..
+          and laughed through the struggle together. Huge shout-out to my co-students and friends who made this journey more fun! 
+          January - February 2026 my environment shifted from the study hall to a master trip to Japan with friends. 
+          I manged to capture some great moments there, and working on my thesis from a nice cafe all around Japan was pretty nice! 
+          Though the hours were few, i spent time frustrated and annoyed that nothing technical worked, 
+          which ended up being a good thing as i shifted my technical set up to something brand new after the trip!
         </p>
       </div>
       
        <div className="bookshelf">
         <PhotoBook title="Study Hall Chronicles" photos={studyPhotos} color="var(--mauve)" />
-        <PhotoBook title="Winter in Japan (coming soon)" photos={japanPhotos} color="var(--rose)" />
+        <PhotoBook title="Winter in Japan " photos={japanPhotos} color="var(--rose)" />
         <PhotoBook title="Moments in Between" photos={miscPhotos} color="var(--peach)" />
 
       </div>
