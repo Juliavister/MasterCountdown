@@ -37,6 +37,9 @@ export default function Gallery({ className = "" }) {
     {src: "/images/lesesalen/lesesalmars.JPG" },
     {src: "/images/lesesalen/hjemme.JPG" },
     {src: "/images/lesesalen/skriving.JPG" },
+    {src: "/images/lesesalen/1.jpeg" },
+    {src: "/images/lesesalen/2.jpeg" },
+    {src: "/images/lesesalen/claude.jpeg" },
     
   ];
 
@@ -75,6 +78,9 @@ export default function Gallery({ className = "" }) {
      {src: "/images/misc/KielTur.JPG", caption: "weekend trip" },
      {src: "/images/misc/dagenmøte.JPG", caption: "meetings.." },
      {src: "/images/misc/konsert.JPG", caption: "went to a concert!!" },
+     {src: "/images/misc/nicee.jpeg", caption: "went on a weeekend trip to Nice!!" },
+     {src: "/images/misc/plane.jpeg", caption: "" },
+
   ];
 
 
