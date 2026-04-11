@@ -13,19 +13,5 @@ It reflects the evolving process of my master’s work while providing visitors 
 - Intersection Observer API for reveal effects
 
 
-#Getting started
-1. Cloning the repo:
-  git clone https://github.com/Juliavister/MasterCountdown.git
-  cd MasterCountdown
-
-2. Install dependencies
-   npm install
-  
-4. Run the dev server
-   npm run dev
-  
-6. Build
-   npm run build
-
 
   
